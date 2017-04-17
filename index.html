@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+<h2>The employees</h2>
+
+<table class="table" id="filterPanel">
+    <tr>
+        <td>
+            <input type="text" id="idParam" onkeyup="filterID()" placeholder="Search for id.." title="Type in a name">
+        </td>
+        <td>
+            <input type="text" id="firstNameParam" onkeyup="filterFirstName()" placeholder="Search for names.." title="Type in a name">
+        </td>
+        <td>
+            <input type="text" id="lastNameParam" onkeyup="filterLastName()" placeholder="Search for surnames.." title="Type in a surname">
+        </td>
+        <td>
+            <!--<input type="text" id="dateOfBirthParam" onkeyup="filterDate()" placeholder="Search for date.." title="Type in a date">-->
+            <input id="date">
+        </td>
+        <td>
+            <input type="text" id="functionParam" onkeyup="filterFunction()" placeholder="Search for function.." title="Type in a function">
+        </td>
+        <td>
+            <input type="text" id="experienceParam" onkeyup="filterExperience()" placeholder="Search for experience.." title="Type in a experience">
+        </td>
+    </tr>
+</table>
+
+
+<table class="table" id="table">
+</table>
+
+
+<!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="main.js"></script>
+<script src="filter.js"></script>
+
+</body>
+</html>
