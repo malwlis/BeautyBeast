@@ -2,6 +2,7 @@
  * Created by Malwinka on 2017-04-17.
  */
 function filterID() {
+    alert("ok");
     var input, filter, table, tr, td, i;
     input = document.getElementById("idParam");
     filter = input.value.toUpperCase();
@@ -62,26 +63,35 @@ function filterDate(dateSelected) {
     tr = table.getElementsByTagName("tr");
 
     //create full date from date selected in datepicker
-    dateSelectedTab = dateSelected.toString().split(".");
-    dateSelected = new Date(dateSelectedTab[2], dateSelectedTab[1], dateSelectedTab[0]);
-
-
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[3];
-
-        //create date from string from column dateOfBirth
-        var dateString =  td.innerHTML.toString().split(" ",1);
-        var dateTab = dateString.toString().split(".");
-        var date = new Date(dateTab[2], dateTab[1], dateTab[0]);
-        alert(date.toString() + " " + dateSelected.toString());
-
-        if (date.getTime() === dateSelected.getTime()) {
+    if (dateSelected === null) {
+        //no date selected
+        for (i = 0; i < tr.length; i++) {
             tr[i].style.display = "";
-        } else {
-            tr[i].style.display = "none";
         }
 
+    } else {
+        //if date is selected
+        dateSelectedTab = dateSelected.toString().split(".");
+        dateSelected = new Date(dateSelectedTab[2], dateSelectedTab[1], dateSelectedTab[0]);
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[3];
+
+            if (td) {
+                //create date from string from column dateOfBirth
+                var dateString =  td.innerHTML.toString().split(" ",1);
+                var dateTab = dateString.toString().split(".");
+                var date = new Date(dateTab[2], dateTab[1], dateTab[0]);
+
+                if (date.getTime() === dateSelected.getTime()) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
     }
+
 }
 
 function filterFunction() {

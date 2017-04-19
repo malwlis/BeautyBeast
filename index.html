@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Emplyees</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -15,39 +15,38 @@
 <table class="table" id="filterPanel">
     <tr>
         <td>
-            <input type="text" id="idParam" onkeyup="filterID()" placeholder="Search for id.." title="Type in a name">
+            <input type="text" id="idParam" onkeyup="filterID()" onclick="filterID()" placeholder="Search for id" title="Type in a name">
         </td>
         <td>
-            <input type="text" id="firstNameParam" onkeyup="filterFirstName()" placeholder="Search for names.." title="Type in a name">
+            <input type="text" id="firstNameParam" onkeyup="filterFirstName()" placeholder="Search for names" title="Type in a name">
         </td>
         <td>
-            <input type="text" id="lastNameParam" onkeyup="filterLastName()" placeholder="Search for surnames.." title="Type in a surname">
+            <input type="text" id="lastNameParam" onkeyup="filterLastName()" placeholder="Search for surnames" title="Type in a surname">
         </td>
         <td>
-            <!--<input type="text" id="dateOfBirthParam" onkeyup="filterDate()" placeholder="Search for date.." title="Type in a date">-->
-            <input id="date">
+            <input id="date" placeholder="Search for dates">
         </td>
         <td>
-            <input type="text" id="functionParam" onkeyup="filterFunction()" placeholder="Search for function.." title="Type in a function">
+            <input type="text" id="functionParam" onkeyup="filterFunction()" placeholder="Search for function" title="Type in a function">
         </td>
         <td>
-            <input type="text" id="experienceParam" onkeyup="filterExperience()" placeholder="Search for experience.." title="Type in a experience">
+            <input type="text" id="experienceParam" onkeyup="filterExperience()" placeholder="Search for experience" title="Type in a experience">
         </td>
     </tr>
 </table>
 
 
 <table class="table" id="table">
+
 </table>
 
 
-<!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
-<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
-
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="main.js"></script>
-<script src="filter.js"></script>
-
+<!--<script src="main.js"></script>-->
+<!--<script src="filter.js"></script>-->
+<!--<script src="sort.js"></script>-->
+<!--<script src="pagination.js"></script>-->
+<script src="loadScripts.js"></script>
 </body>
 </html>
