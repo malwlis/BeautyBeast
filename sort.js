@@ -2,7 +2,7 @@
  * Created by Malwinka on 2017-04-17.
  */
 function sortTable(n) {
-    var table, rows, isSwitching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    var table, rows, isSwitching, x, y, shouldSwitch, dir, switchCount = 0;
     table = document.getElementById("table");
     isSwitching = true;
     //first click cause ascending sort
@@ -16,7 +16,7 @@ function sortTable(n) {
             shouldSwitch = false;
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
-            //sort rows
+
             if (dir === "asc") {
                 //sort asc by id or experience
                 if (n === 0 || n === 5) {
@@ -72,9 +72,9 @@ function sortTable(n) {
             //make switch
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
             isSwitching = true;
-            switchcount ++;
+            switchCount ++;
         } else {
-            if (switchcount === 0 && dir === "asc") {
+            if (switchCount === 0 && dir === "asc") {
                 //change direction
                 dir = "desc";
                 isSwitching = true;
